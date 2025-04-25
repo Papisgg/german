@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Profil | Silberne Begegnungen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="logged-in">
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">♥</span>
+                <h1>Silberne Begegnungen</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard.html">Start</a></li>
+                    <li><a href="matches.html">Partner</a></li>
+                    <li><a href="#">Nachrichten</a></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="user-avatar">
+                    <img src="https://via.placeholder.com/40x40?text=User" alt="Profilbild">
+                </div>
+                <div class="user-dropdown">
+                    <ul>
+                        <li><a href="profile.html" class="active">Mein Profil</a></li>
+                        <li><a href="#">Einstellungen</a></li>
+                        <li><a href="#">Hilfe</a></li>
+                        <li><a href="#" id="logout">Abmelden</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="profile-page">
+        <div class="container">
+            <div class="profile-header">
+                <h2>Mein Profil</h2>
+                <div class="profile-actions">
+                    <button class="btn btn-outline">Vorschau</button>
+                    <button class="btn btn-primary">Profil speichern</button>
+                </div>
+            </div>
+
+            <div class="profile-grid">
+                <div class="profile-sidebar">
+                    <div class="profile-avatar-upload">
+                        <div class="avatar-preview">
+                            <img src="https://via.placeholder.com/200x200?text=Profilbild" alt="Profilbild" id="avatar-preview">
+                            <div class="upload-overlay">
+                                <span class="icon">📷</span>
+                                <span>Foto ändern</span>
+                            </div>
+                        </div>
+                        <input type="file" id="avatar-upload" accept="image/*">
+                        <div class="avatar-actions">
+                            <button class="btn btn-outline btn-small">Entfernen</button>
+                            <button class="btn btn-outline btn-small">Bearbeiten</button>
+                        </div>
+                    </div>
+
+                    <div class="profile-completion">
+                        <h4>Profilvollständigkeit</h4>
+                        <div class="completion-bar">
+                            <div class="completion-fill" style="width: 75%;"></div>
+                        </div>
+                        <p>75% vollständig</p>
+                        <ul class="completion-tips">
+                            <li class="completed">✓ Basisinformationen</li>
+                            <li class="completed">✓ Profilbild</li>
+                            <li>✗ Beschreibung</li>
+                            <li>✗ Interessen</li>
+                            <li class="completed">✓ Standort</li>
+                        </ul>
+                    </div>
+
+                    <div class="profile-tips">
+                        <h4>Tipps für ein besseres Profil</h4>
+                        <ul>
+                            <li>✔ Lächeln Sie auf Ihrem Profilbild</li>
+                            <li>✔ Beschreiben Sie sich authentisch</li>
+                            <li>✔ Geben Sie Ihre Hobbys an</li>
+                            <li>✔ Laden Sie mehrere Fotos hoch</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="profile-main">
+                    <form class="profile-form">
+                        <div class="form-section">
+                            <h3>Grundinformationen</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="profile-name">Vorname</label>
+                                    <input type="text" id="profile-name" value="Klaus">
+                                </div>
+                                <div class="form-group">
+                                    <label for="profile-age">Alter</label>
+                                    <input type="number" id="profile-age" value="62" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="profile-gender">Geschlecht</label>
+                                    <select id="profile-gender">
+                                        <option value="male" selected>Mann</option>
+                                        <option value="female">Frau</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="profile-city">Stadt</label>
+                                    <input type="text" id="profile-city" value="München">
+                                </div>
+                                <div class="form-group">
+                                    <label for="profile-relationship">Beziehungsstatus</label>
+                                    <select id="profile-relationship">
+                                        <option value="single" selected>Single</option>
+                                        <option value="divorced">Geschieden</option>
+                                        <option value="widowed">Verwitwet</option>
+                                        <option value="separated">Getrennt lebend</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="profile-height">Körpergröße (cm)</label>
+                                    <input type="number" id="profile-height" value="178">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Über mich</h3>
+                            <div class="form-group">
+                                <label for="profile-about">Beschreibung</label>
+                                <textarea id="profile-about" rows="5">Lebensfroher, aktiver Rentner sucht eine gleichgesinnte Partnerin für gemeinsame Unternehmungen. Ich liebe Reisen, klassische Musik und lange Spaziergänge in der Natur. Nach einer langen Karriere im Bankwesen freue ich mich jetzt auf neue Erfahrungen und Begegnungen.</textarea>
+                                <small class="char-counter"><span id="about-chars">250</span>/500 Zeichen</small>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Interessen</h3>
+                            <div class="form-group">
+                                <label>Wählen Sie Ihre Interessen</label>
+                                <div class="interest-tags-select">
+                                    <span class="tag-selectable active">Reisen</span>
+                                    <span class="tag-selectable active">Musik</span>
+                                    <span class="tag-selectable">Kochen</span>
+                                    <span class="tag-selectable">Lesen</span>
+                                    <span class="tag-selectable active">Wandern</span>
+                                    <span class="tag-selectable">Fotografie</span>
+                                    <span class="tag-selectable">Theater</span>
+                                    <span class="tag-selectable">Kino</span>
+                                    <span class="tag-selectable">Sport</span>
+                                    <span class="tag-selectable">Kunst</span>
+                                    <span class="tag-selectable">Wein</span>
+                                    <span class="tag-selectable">Garten</span>
+                                    <span class="tag-selectable">Tiere</span>
+                                    <span class="tag-selectable">Autos</span>
+                                    <span class="tag-selectable">Politik</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Fotos</h3>
+                            <div class="photos-grid">
+                                <div class="photo-upload">
+                                    <div class="photo-preview empty">
+                                        <span class="icon">+</span>
+                                        <span>Foto hinzufügen</span>
+                                    </div>
+                                    <input type="file" class="photo-upload-input" accept="image/*">
+                                </div>
+                                <div class="photo-upload">
+                                    <div class="photo-preview">
+                                        <img src="https://via.placeholder.com/150x150?text=Urlaub" alt="Foto">
+                                        <button class="photo-delete">×</button>
+                                    </div>
+                                </div>
+                                <div class="photo-upload">
+                                    <div class="photo-preview">
+                                        <img src="https://via.placeholder.com/150x150?text=Hobby" alt="Foto">
+                                        <button class="photo-delete">×</button>
+                                    </div>
+                                </div>
+                                <div class="photo-upload">
+                                    <div class="photo-preview empty">
+                                        <span class="icon">+</span>
+                                        <span>Foto hinzufügen</span>
+                                    </div>
+                                    <input type="file" class="photo-upload-input" accept="image/*">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Partnerpräferenzen</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="pref-gender">Geschlecht</label>
+                                    <select id="pref-gender">
+                                        <option value="female" selected>Frau</option>
+                                        <option value="male">Mann</option>
+                                        <option value="any">Egal</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pref-age-min">Alter von</label>
+                                    <select id="pref-age-min">
+                                        <option value="45">45</option>
+                                        <option value="50">50</option>
+                                        <option value="55" selected>55</option>
+                                        <option value="60">60</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pref-age-max">bis</label>
+                                    <select id="pref-age-max">
+                                        <option value="60">60</option>
+                                        <option value="65">65</option>
+                                        <option value="70" selected>70</option>
+                                        <option value="75">75</option>
+                                        <option value="80">80</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pref-location">Entfernung (km)</label>
+                                    <select id="pref-location">
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50" selected>50</option>
+                                        <option value="100">100</option>
+                                        <option value="any">Egal</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline">Abbrechen</button>
+                            <button type="submit" class="btn btn-primary">Änderungen speichern</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="links-column">
+                    <h4>Unternehmen</h4>
+                    <ul>
+                        <li><a href="#">Über uns</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                        <li><a href="#">Presse</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h4>Hilfe</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Sicherheit</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="#">AGB</a></li>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Cookie-Richtlinie</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Silberne Begegnungen. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

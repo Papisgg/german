@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner | Silberne Begegnungen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="logged-in">
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">♥</span>
+                <h1>Silberne Begegnungen</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard.html">Start</a></li>
+                    <li><a href="matches.html" class="active">Partner</a></li>
+                    <li><a href="#">Nachrichten</a></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="user-avatar">
+                    <img src="https://via.placeholder.com/40x40?text=User" alt="Profilbild">
+                </div>
+                <div class="user-dropdown">
+                    <ul>
+                        <li><a href="profile.html">Mein Profil</a></li>
+                        <li><a href="#">Einstellungen</a></li>
+                        <li><a href="#">Hilfe</a></li>
+                        <li><a href="#" id="logout">Abmelden</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="matches-page">
+        <div class="container">
+            <div class="matches-header">
+                <h2>Passende Partner</h2>
+                <div class="matches-filter">
+                    <button class="btn btn-outline btn-filter active">Alle</button>
+                    <button class="btn btn-outline btn-filter">Neu</button>
+                    <button class="btn btn-outline btn-filter">Favoriten</button>
+                    <button class="btn btn-outline btn-filter">In meiner Nähe</button>
+                    <div class="filter-dropdown">
+                        <button class="btn btn-outline">Filter <span class="icon">▼</span></button>
+                        <div class="dropdown-content">
+                            <div class="filter-group">
+                                <label>Alter</label>
+                                <div class="range-slider">
+                                    <span>45</span>
+                                    <input type="range" min="45" max="80" value="60" class="slider">
+                                    <span>80</span>
+                                </div>
+                                <div class="range-values">
+                                    <span>45 - 80</span>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label>Entfernung (km)</label>
+                                <div class="range-slider">
+                                    <span>0</span>
+                                    <input type="range" min="0" max="100" value="50" class="slider">
+                                    <span>100</span>
+                                </div>
+                                <div class="range-values">
+                                    <span>0 - 100 km</span>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label>Interessen</label>
+                                <div class="interest-tags">
+                                    <span class="tag">Reisen</span>
+                                    <span class="tag">Musik</span>
+                                    <span class="tag">Kochen</span>
+                                    <span class="tag">Lesen</span>
+                                    <span class="tag">Sport</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-block">Filter anwenden</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="matches-grid">
+                <div class="match-card detailed">
+                    <div class="match-photo">
+                        <img src="https://via.placeholder.com/300x300?text=Maria" alt="Maria">
+                        <button class="btn-like active">♥</button>
+                    </div>
+                    <div class="match-info">
+                        <h3>Maria, 58</h3>
+                        <p class="match-location">Nürnberg, 25 km entfernt</p>
+                        <div class="match-stats">
+                            <span class="stat"><span class="icon">👁</span> 12x angesehen</span>
+                            <span class="stat"><span class="icon">♥</span> 8 Favoriten</span>
+                        </div>
+                        <div class="match-about">
+                            <h4>Über mich</h4>
+                            <p>Lebensfrohe, naturverbundene Frau sucht einen gleichgesinnten Partner für gemeinsame Unternehmungen und schöne Gespräche. Ich liebe Reisen, klassische Musik und gutes Essen.</p>
+                        </div>
+                        <div class="match-interests">
+                            <h4>Interessen</h4>
+                            <div class="interest-tags">
+                                <span class="tag active">Reisen</span>
+                                <span class="tag active">Musik</span>
+                                <span class="tag">Kochen</span>
+                                <span class="tag active">Wandern</span>
+                                <span class="tag">Theater</span>
+                            </div>
+                        </div>
+                        <div class="match-actions">
+                            <button class="btn btn-outline">Profil</button>
+                            <button class="btn btn-primary">Nachricht senden</button>
+                            <button class="btn btn-secondary">Winken</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="match-card">
+                    <div class="match-photo">
+                        <img src="https://via.placeholder.com/200x200?text=Petra" alt="Petra">
+                        <button class="btn-like">♥</button>
+                    </div>
+                    <div class="match-info">
+                        <h4>Petra, 60</h4>
+                        <p class="match-location">Augsburg, 50 km</p>
+                        <p class="match-interests">Lesen, Wandern, Theater</p>
+                        <div class="match-actions">
+                            <button class="btn btn-outline btn-small">Profil</button>
+                            <button class="btn btn-primary btn-small">Nachricht</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="match-card">
+                    <div class="match-photo">
+                        <img src="https://via.placeholder.com/200x200?text=Gisela" alt="Gisela">
+                        <button class="btn-like">♥</button>
+                    </div>
+                    <div class="match-info">
+                        <h4>Gisela, 55</h4>
+                        <p class="match-location">München, 5 km</p>
+                        <p class="match-interests">Fotografie, Garten, Wein</p>
+                        <div class="match-actions">
+                            <button class="btn btn-outline btn-small">Profil</button>
+                            <button class="btn btn-primary btn-small">Nachricht</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="match-card">
+                    <div class="match-photo">
+                        <img src="https://via.placeholder.com/200x200?text=Monika" alt="Monika">
+                        <button class="btn-like">♥</button>
+                    </div>
+                    <div class="match-info">
+                        <h4>Monika, 62</h4>
+                        <p class="match-location">Rosenheim, 40 km</p>
+                        <p class="match-interests">Tanzen, Kino, Kochen</p>
+                        <div class="match-actions">
+                            <button class="btn btn-outline btn-small">Profil</button>
+                            <button class="btn btn-primary btn-small">Nachricht</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="match-card">
+                    <div class="match-photo">
+                        <img src="https://via.placeholder.com/200x200?text=Ursula" alt="Ursula">
+                        <button class="btn-like active">♥</button>
+                    </div>
+                    <div class="match-info">
+                        <h4>Ursula, 65</h4>
+                        <p class="match-location">Ingolstadt, 60 km</p>
+                        <p class="match-interests">Malerei, Literatur, Spaziergänge</p>
+                        <div class="match-actions">
+                            <button class="btn btn-outline btn-small">Profil</button>
+                            <button class="btn btn-primary btn-small">Nachricht</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="match-card">
+                    <div class="match-photo">
+                        <img src="https://via.placeholder.com/200x200?text=Sabine" alt="Sabine">
+                        <button class="btn-like">♥</button>
+                    </div>
+                    <div class="match-info">
+                        <h4>Sabine, 59</h4>
+                        <p class="match-location">München, 10 km</p>
+                        <p class="match-interests">Yoga, Meditation, Reisen</p>
+                        <div class="match-actions">
+                            <button class="btn btn-outline btn-small">Profil</button>
+                            <button class="btn btn-primary btn-small">Nachricht</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="btn btn-outline" disabled>← Zurück</button>
+                <span class="page-numbers">
+                    <span class="active">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>10</span>
+                </span>
+                <button class="btn btn-outline">Weiter →</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="links-column">
+                    <h4>Unternehmen</h4>
+                    <ul>
+                        <li><a href="#">Über uns</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                        <li><a href="#">Presse</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h4>Hilfe</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Sicherheit</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="#">AGB</a></li>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Cookie-Richtlinie</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Silberne Begegnungen. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

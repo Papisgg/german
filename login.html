@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmelden | Silberne Begegnungen</title>
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <div class="logo">
+                <span class="logo-icon">♥</span>
+                <h1>Silberne Begegnungen</h1>
+            </div>
+            <div class="auth-tabs">
+                <button id="login-tab" class="auth-tab active">Anmelden</button>
+                <button id="register-tab" class="auth-tab">Registrieren</button>
+            </div>
+        </div>
+
+        <div class="auth-content">
+            <form id="login-form" class="auth-form active">
+                <div class="form-group">
+                    <label for="login-email">E-Mail</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Passwort</label>
+                    <input type="password" id="login-password" required>
+                    <a href="#" class="forgot-password">Passwort vergessen?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Anmelden</button>
+                <div class="social-login">
+                    <p>Oder mit Social Media anmelden</p>
+                    <div class="social-buttons">
+                        <button type="button" class="btn btn-social btn-facebook">Facebook</button>
+                        <button type="button" class="btn btn-social btn-google">Google</button>
+                    </div>
+                </div>
+            </form>
+
+            <form id="register-form" class="auth-form">
+                <div class="form-group">
+                    <label for="register-gender">Ich bin</label>
+                    <select id="register-gender" required>
+                        <option value="" disabled selected>Auswählen</option>
+                        <option value="male">Mann</option>
+                        <option value="female">Frau</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="register-name">Vorname</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-birthdate">Geburtsdatum</label>
+                    <input type="date" id="register-birthdate" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">E-Mail</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Passwort</label>
+                    <input type="password" id="register-password" required>
+                    <small>Mindestens 8 Zeichen</small>
+                </div>
+                <div class="form-group">
+                    <label for="register-location">Ort/Postleitzahl</label>
+                    <input type="text" id="register-location" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="register-terms" required>
+                    <label for="register-terms">Ich akzeptiere die <a href="#">AGB</a> und <a href="#">Datenschutzbestimmungen</a></label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Kostenlos registrieren</button>
+            </form>
+        </div>
+
+        <div class="auth-footer">
+            <p>Bereits Mitglied? <a href="#" id="switch-to-login">Hier anmelden</a></p>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

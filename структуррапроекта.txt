@@ -1,0 +1,13 @@
+/silberne-begegnungen
+├── index.html          # Главная страница (лендинг)
+├── login.html          # Страница входа/регистрации
+├── dashboard.html      # Главная после входа
+├── profile.html        # Страница профиля
+├── matches.html        # Лента совпадений
+├── css/
+│   ├── style.css       # Основные стили
+│   └── auth.css        # Стили для авторизации
+└── js/
+    ├── main.js         # Основной JavaScript
+    ├── auth.js         # Логика авторизации
+    └── profile.js      # Логика профиля

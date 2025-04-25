@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Silberne Begegnungen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="logged-in">
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">♥</span>
+                <h1>Silberne Begegnungen</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard.html" class="active">Start</a></li>
+                    <li><a href="matches.html">Partner</a></li>
+                    <li><a href="#">Nachrichten</a></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="user-avatar">
+                    <img src="https://via.placeholder.com/40x40?text=User" alt="Profilbild">
+                    <span class="notification-badge">3</span>
+                </div>
+                <div class="user-dropdown">
+                    <ul>
+                        <li><a href="profile.html">Mein Profil</a></li>
+                        <li><a href="#">Einstellungen</a></li>
+                        <li><a href="#">Hilfe</a></li>
+                        <li><a href="#" id="logout">Abmelden</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <div class="container">
+            <div class="dashboard-grid">
+                <aside class="dashboard-sidebar">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <img src="https://via.placeholder.com/100x100?text=User" alt="Profilbild">
+                            <span class="online-status"></span>
+                        </div>
+                        <h3>Hallo, Klaus!</h3>
+                        <p class="profile-location">München, 62 Jahre</p>
+                        <div class="profile-completion">
+                            <div class="completion-bar">
+                                <div class="completion-fill" style="width: 75%;"></div>
+                            </div>
+                            <p>Profil zu 75% vollständig</p>
+                        </div>
+                        <a href="profile.html" class="btn btn-outline btn-small">Profil vervollständigen</a>
+                    </div>
+
+                    <div class="quick-actions">
+                        <h4>Schnellzugriff</h4>
+                        <ul>
+                            <li><a href="#"><span class="icon">✉</span> Nachrichten <span class="badge">2</span></a></li>
+                            <li><a href="#"><span class="icon">♥</span> Favoriten</a></li>
+                            <li><a href="#"><span class="icon">👁</span> Wer hat mich gesehen?</a></li>
+                            <li><a href="#"><span class="icon">🔔</span> Benachrichtigungen <span class="badge">1</span></a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <div class="dashboard-main">
+                    <section class="welcome-banner">
+                        <h2>Willkommen zurück, Klaus!</h2>
+                        <p>Wir haben 5 neue Partner für Sie gefunden, die zu Ihren Interessen passen.</p>
+                        <a href="matches.html" class="btn btn-primary">Partner entdecken</a>
+                    </section>
+
+                    <section class="new-matches">
+                        <div class="section-header">
+                            <h3>Neue Vorschläge</h3>
+                            <a href="matches.html" class="see-all">Alle anzeigen</a>
+                        </div>
+                        <div class="matches-grid">
+                            <div class="match-card">
+                                <div class="match-photo">
+                                    <img src="https://via.placeholder.com/150x150?text=Maria" alt="Maria">
+                                    <button class="btn-like">♥</button>
+                                </div>
+                                <div class="match-info">
+                                    <h4>Maria, 58</h4>
+                                    <p class="match-location">Nürnberg</p>
+                                    <p class="match-interests">Reisen, Musik, Kochen</p>
+                                    <div class="match-actions">
+                                        <button class="btn btn-outline btn-small">Profil</button>
+                                        <button class="btn btn-primary btn-small">Nachricht</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="match-card">
+                                <div class="match-photo">
+                                    <img src="https://via.placeholder.com/150x150?text=Petra" alt="Petra">
+                                    <button class="btn-like">♥</button>
+                                </div>
+                                <div class="match-info">
+                                    <h4>Petra, 60</h4>
+                                    <p class="match-location">Augsburg</p>
+                                    <p class="match-interests">Lesen, Wandern, Theater</p>
+                                    <div class="match-actions">
+                                        <button class="btn btn-outline btn-small">Profil</button>
+                                        <button class="btn btn-primary btn-small">Nachricht</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="match-card">
+                                <div class="match-photo">
+                                    <img src="https://via.placeholder.com/150x150?text=Gisela" alt="Gisela">
+                                    <button class="btn-like">♥</button>
+                                </div>
+                                <div class="match-info">
+                                    <h4>Gisela, 55</h4>
+                                    <p class="match-location">München</p>
+                                    <p class="match-interests">Fotografie, Garten, Wein</p>
+                                    <div class="match-actions">
+                                        <button class="btn btn-outline btn-small">Profil</button>
+                                        <button class="btn btn-primary btn-small">Nachricht</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="activity-feed">
+                        <div class="section-header">
+                            <h3>Aktivitäten</h3>
+                        </div>
+                        <div class="activity-items">
+                            <div class="activity-item">
+                                <div class="activity-avatar">
+                                    <img src="https://via.placeholder.com/50x50?text=Maria" alt="Maria">
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Maria</strong> hat Ihr Profil angesehen</p>
+                                    <small class="activity-time">Vor 2 Stunden</small>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-avatar">
+                                    <img src="https://via.placeholder.com/50x50?text=Petra" alt="Petra">
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Petra</strong> hat Ihnen eine Nachricht geschickt</p>
+                                    <small class="activity-time">Gestern</small>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-avatar">
+                                    <img src="https://via.placeholder.com/50x50?text=System" alt="System">
+                                </div>
+                                <div class="activity-content">
+                                    <p>3 neue Partner in Ihrer Region gefunden</p>
+                                    <small class="activity-time">Gestern</small>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <aside class="dashboard-rightbar">
+                    <div class="premium-card">
+                        <h4>Silberne Begegnungen Premium</h4>
+                        <p>Erhalten Sie mehr Aufmerksamkeit und bessere Ergebnisse:</p>
+                        <ul>
+                            <li>✔ Erscheinen Sie oben in Suchergebnissen</li>
+                            <li>✔ Sehen Sie, wer Ihr Profil besucht hat</li>
+                            <li>✔ Unbegrenzte Nachrichten</li>
+                            <li>✔ Erweiterte Suchfilter</li>
+                        </ul>
+                        <button class="btn btn-primary btn-block">Jetzt upgraden</button>
+                    </div>
+
+                    <div class="events-card">
+                        <h4>Kommende Events</h4>
+                        <div class="event-item">
+                            <h5>Stammtisch München</h5>
+                            <p>15. November, 18:00</p>
+                            <p>Hofbräuhaus München</p>
+                            <button class="btn btn-outline btn-small btn-block">Anmelden</button>
+                        </div>
+                        <div class="event-item">
+                            <h5>Online-Weinprobe</h5>
+                            <p>20. November, 19:30</p>
+                            <p>Virtuelles Event</p>
+                            <button class="btn btn-outline btn-small btn-block">Anmelden</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="links-column">
+                    <h4>Unternehmen</h4>
+                    <ul>
+                        <li><a href="#">Über uns</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                        <li><a href="#">Presse</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h4>Hilfe</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Sicherheit</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="#">AGB</a></li>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Cookie-Richtlinie</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Silberne Begegnungen. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
